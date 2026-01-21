@@ -7,6 +7,7 @@ The pipeline follows a Bronze → Silver → Gold architecture with Python used 
 ### 🧱 Architecture Overview
 
 
+```mermaid
 graph TD
     A[CSV Files] --> B[PostgreSQL (Bronze Schema)]
     B --> C[SQL Transformations (Silver Schema)]
