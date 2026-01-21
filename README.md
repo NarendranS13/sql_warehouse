@@ -199,19 +199,19 @@ Gold objects are created as tables/views under the *gold* schema and are designe
 Database: PostgreSQL
 
 
-Languages: SQL, Python
+* Languages: SQL, Python
 
 
-Python Libraries: pandas, SQLAlchemy
+* Python Libraries: pandas, SQLAlchemy
 
 
-Architecture: Bronze–Silver–Gold (Medallion Architecture)
+* Architecture: Bronze–Silver–Gold (Medallion Architecture)
 
 
-Version Control: Git & GitHub
+* Version Control: Git & GitHub
 
 
-Security: Environment variable–based credential management
+* Security: Environment variable–based credential management
 
 
 ### 📌 Key Learnings
