@@ -104,11 +104,15 @@ Prepare analytics-ready tables by enforcing data quality and business rules.
 
 **Silver tables created:**
 
+
     * silver.customers
+
 
     * silver.products
 
+
     * silver.orders
+
 
     * silver.order_items
 
