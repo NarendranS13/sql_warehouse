@@ -9,10 +9,10 @@ The pipeline follows a Bronze → Silver → Gold architecture with Python used 
 
 ```mermaid
 graph TD
-    A[CSV Files] --> B[PostgreSQL (Bronze Schema)]
-    B --> C[SQL Transformations (Silver Schema)]
-    C --> D[SQL Analytics Tables (Gold Schema)]
-    D --> E[Python Validation & Visualization (Planned)]
+    A[CSV Files] --> B["PostgreSQL (Bronze Schema)"]
+    B --> C["SQL Transformations (Silver Schema)"]
+    C --> D["SQL Analytics Tables (Gold Schema)"]
+    D --> E["Python Validation & Visualization (Planned)"]
 
 
 ### 🟤 Bronze Layer — Raw Data Ingestion
