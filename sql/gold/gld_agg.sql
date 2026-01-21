@@ -1,3 +1,7 @@
+--- MONTHLY TOTAL REVENUE AND TOTAL ORDERS
+DROP TABLE IF EXISTS gold.monthly_revenue_orders;
+
+CREATE TABLE gold.monthly_revenue_orders AS
 select
 date_trunc('month', o.order_date )as year_month,
 	SUM(oi.price + oi.freight_value) as total_revenue,
@@ -24,6 +28,9 @@ ORDER BY 1;
 
 --- Check city wise order revenue data
 
+DROP TABLE IF EXISTS gold.city_wise_revenue;
+
+CREATE TABLE gold.city_wise_revenue AS
 SELECT CU.CUSTOMER_CITY, DATE_TRUNC('month', O.ORDER_DATE)as YEAR_MONTH, COUNT (DISTINCT CU.CUSTOMER_ID)AS TOTAL_USERS,
 		SUM(oi.price + oi.freight_value) as total_revenue,
 	COUNT(distinct o.order_id)as total_orders from 
@@ -39,6 +46,9 @@ ORDER BY TOTAL_USERS DESC;
 
 --- Monthly revenue by Product Category
 
+DROP TABLE IF EXISTS gold.monthly_category_revenue;
+
+CREATE TABLE gold.monthly_category_revenue AS
 SELECT DATE_TRUNC('month', o.order_date)as YEARMONTH, p.product_category, 
 	SUM (oi.price + oi.freight_value)as total_revenue, 
 	COUNT (DISTINCT o.order_id)as total_orders
@@ -52,10 +62,12 @@ ORDER BY 1, total_revenue DESC;
 
 
 -- CUSTOMER LIFETIME VALUE (CLV)
+DROP TABLE IF EXISTS gold.customer_lifetime_value;
 
+CREATE TABLE gold.customer_lifetime_value AS
 SELECT
-	o.customer_id,  zzzz
-	SUM(oi.price + oi.freight_value)as total_revenue,
+	o.customer_id, 
+	SUM (oi.price + oi.freight_value)as total_revenue,
 	COUNT(DISTINCT o.order_id)as total_orders,
 	MIN(o.order_date)as first_purchase_date,
 	MAX(o.order_date)as last_purchase_date
@@ -68,6 +80,9 @@ ORDER BY total_revenue DESC;
 
 --- Top Products by Revenue 
 
+DROP TABLE IF EXISTS gold.top_products;
+
+CREATE TABLE gold.top_products AS 
 SELECT
     p.product_id,
     p.product_category,
