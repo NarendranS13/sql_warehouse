@@ -13,7 +13,7 @@ graph TD
     B --> C["SQL Transformations (Silver Schema)"]
     C --> D["SQL Analytics Tables (Gold Schema)"]
     D --> E["Python Validation & Visualization (Planned)"]
-
+```
 
 ### 🟤 Bronze Layer — Raw Data Ingestion
 
