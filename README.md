@@ -172,3 +172,61 @@ Create business-ready, aggregated tables for reporting and analysis.
 
 
 Gold objects are created as tables/views under the *gold* schema and are designed to be directly consumable by BI tools.
+
+
+### 📈 Python Validation & Visualization (Planned)
+
+
+**Next steps (in progress):**
+
+
+    * Query Gold tables using Python.
+
+
+    * Perform sanity checks on aggregates (row counts, revenue totals).
+
+
+    * Create simple validation plots (monthly revenue trends, top categories).
+
+
+    * Export selected Gold tables for downstream consumption.
+
+
+
+### 🛠 Tech Stack
+
+
+Database: PostgreSQL
+
+
+Languages: SQL, Python
+
+
+Python Libraries: pandas, SQLAlchemy
+
+
+Architecture: Bronze–Silver–Gold (Medallion Architecture)
+
+
+Version Control: Git & GitHub
+
+
+Security: Environment variable–based credential management
+
+
+### 📌 Key Learnings
+
+
+* Designed a SQL-first analytics warehouse with layered architecture.
+
+
+* Applied real-world data modeling concepts (facts, dimensions, grain).
+
+
+* Enforced data quality using joins and business rules.
+
+
+* Demonstrated how Python complements SQL as an orchestration tool.
+
+
+* Built analytics-ready datasets suitable for reporting and dashboards.
