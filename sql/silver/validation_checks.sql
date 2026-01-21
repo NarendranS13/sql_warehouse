@@ -8,7 +8,7 @@ LEFT JOIN silver.customers c
 	on o.customer_id = c.customer_id
 WHERE c.customer_id IS NULL;
 
--- Order items without orders
+-- Order items without order_id
 
 SELECT *
 FROM silver.order_items oi 
