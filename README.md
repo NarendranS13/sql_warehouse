@@ -7,17 +7,12 @@ The pipeline follows a Bronze → Silver → Gold architecture with Python used 
 ### 🧱 Architecture Overview
 
 
-'''psql
-CSV Files
-⬇️
-PostgreSQL (Bronze Schema)
-⬇️
-SQL Transformations (Silver Schema)
-⬇️
-SQL Analytics Tables (Gold Schema)
-⬇️
-Python Validation & Visualization (Planned)
-'''
+graph TD
+    A[CSV Files] --> B[PostgreSQL (Bronze Schema)]
+    B --> C[SQL Transformations (Silver Schema)]
+    C --> D[SQL Analytics Tables (Gold Schema)]
+    D --> E[Python Validation & Visualization (Planned)]
+
 
 ### 🟤 Bronze Layer — Raw Data Ingestion
 
