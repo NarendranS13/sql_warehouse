@@ -176,10 +176,6 @@ Gold objects are created as tables/views under the *gold* schema and are designe
 
 ### 📈 Python Validation & Visualization (Planned)
 
-
-**Next steps (in progress):**
-
-
     * Query Gold tables using Python.
 
 
