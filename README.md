@@ -174,7 +174,7 @@ Create business-ready, aggregated tables for reporting and analysis.
 Gold objects are created as tables/views under the *gold* schema and are designed to be directly consumable by BI tools.
 
 
-### 📈 Python Validation & Visualization (Planned)
+### 📈 Python Validation & Visualization
 
     * Query Gold tables using Python.
 
